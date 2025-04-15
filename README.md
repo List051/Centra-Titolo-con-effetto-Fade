@@ -1,3 +1,10 @@
+# ModFormFade
+
+![NuGet](https://img.shields.io/nuget/v/ModFormFade?style=flat-square)
+![Downloads](https://img.shields.io/nuget/dt/ModFormFade?style=flat-square)
+
+
+
 # ModUtility - Fade & Form Manager per WinForms VB.NET
 
 `ModUtility` è un modulo utile per la gestione semplificata dell'apertura dei `Form` in un'applicazione WinForms con effetto dissolvenza (fade) sul titolo e gestione automatica del contenuto all'interno di un `Panel`.
