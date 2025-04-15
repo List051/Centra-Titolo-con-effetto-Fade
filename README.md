@@ -75,7 +75,5 @@ Public Class MainForm
 
 End Class
 
-### Esempio Demo
 
-```vbnet
 
