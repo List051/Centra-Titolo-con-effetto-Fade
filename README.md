@@ -37,22 +37,30 @@ Assicurati che `ModUtility` sia incluso nel tuo progetto o in una libreria refer
 
 ### 2. Struttura base del `Form` principale
 
-Nel `Form` principale (`FormMain`, per esempio), assicurati di avere:
+Nel `Form` principale (`Form1`, per esempio), assicurati di avere:
 
 ```vbnet
-' Panel che ospita i Form secondari
-Private WithEvents PanelBody As New Panel With {
-    .Dock = DockStyle.Fill,
-    .Name = "PanelBody"
-}
+Imports CentraTitolo
+Imports ModFormFade
 
-' Pannello personalizzato per il titolo
-Private pnlTitoloPers As New Panel With {
-    .Dock = DockStyle.Top,
-    .Height = 50,
-    .BackColor = Color.SteelBlue,
-    .Name = "pnlTitoloPers"
-}
+Public Class Form1
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FrmTitolo.CTitolo(Me, "Menu Principale")
+    End Sub
+
+    Private Sub BtnApriForm2_Click(sender As Object, e As EventArgs) Handles BtnApriForm2.Click
+
+        ModUtility.ApriFormFade(New Form2()) ' con effetto dissolvenza
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        ModUtility.ApriFormFade(New Form3()) ' con effetto dissolvenza
+
+    End Sub
+
+End Class
 
 
 💡 Versione alternativa (completa)
