@@ -1,6 +1,6 @@
 'Imports ModUtility
 
-'Public Class MainForm
+'Public Class Form1
 
 '    Private Sub btnApriForm_Click(sender As Object, e As EventArgs) Handles btnApriForm.Click
 '        ModUtility.ApriFormFade(New FormClienti()) ' con effetto dissolvenza
@@ -18,57 +18,34 @@
 '│
 '├── ExampleApp\             ' Progetto di esempio
 '│   ├── ExampleApp.vbproj
-'│   ├── FormMain.vb         ' Form principale con Panel e Button
-'│   ├── FormDemo.vb         ' Form che viene caricato con fade
-'│   └── ...
+'│   ├── Form1.vb         ' Form principale con Panel e Button
+'│   ├── Form2.vb         ' Form che viene caricato con fade
+'│   └── Form3.vb         ' Form che viene caricato con fade
 '└── README.md
 
+```vbnet
 
-'Imports ModFormFade
+Imports CentraTitolo
+Imports ModFormFade
 
-'Public Class FormMain
-'    Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-'        ' Aggiunge i controlli dinamicamente
-'        Me.Controls.Add(PanelBody)
-'        Me.Controls.Add(pnlTitoloPers)
-'        Me.Controls.Add(btnApri)
-'    End Sub
+Public Class Form1
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FrmTitolo.CTitolo(Me, "Menu Principale")   ' Inserire anche nel Form2 e Form3
+    End Sub
 
-'    Private WithEvents PanelBody As New Panel With {
-'        .Dock = DockStyle.Fill,
-'        .Name = "PanelBody"
-'    }
+    Private Sub BtnApriForm2_Click(sender As Object, e As EventArgs) Handles BtnApriForm2.Click
 
-'    Private pnlTitoloPers As New Panel With {
-'        .Dock = DockStyle.Top,
-'        .Height = 40,
-'        .BackColor = Color.DarkSlateGray,
-'        .Name = "pnlTitoloPers"
-'    }
+        ModUtility.ApriFormFade(New Form2()) ' con effetto dissolvenza
 
-'    Private btnApri As New Button With {
-'        .Text = "Apri Demo",
-'        .Dock = DockStyle.Top
-'    }
+    End Sub
 
-'    Private Sub btnApri_Click(sender As Object, e As EventArgs) Handles btnApri.Click
-'        ModUtility.ApriFormFade(New FormDemo(), Me, PanelBody)
-'    End Sub
-'End Class
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-'Public Class FormDemo
-'    Inherits Form
+        ModUtility.ApriFormFade(New Form3()) ' con effetto dissolvenza
 
-'    Public Sub New()
-'        Me.BackColor = Color.LightGreen
-'        Dim lbl As New Label With {
-'            .Text = "Ciao dal FormDemo!",
-'            .Dock = DockStyle.Fill,
-'            .TextAlign = ContentAlignment.MiddleCenter,
-'            .Font = New Font("Segoe UI", 18, FontStyle.Bold)
-'        }
-'        Me.Controls.Add(lbl)
-'    End Sub
-'End Class
+    End Sub
+
+End Class
+
 
 
