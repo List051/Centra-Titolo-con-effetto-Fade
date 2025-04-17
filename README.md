@@ -3,7 +3,13 @@
 ![NuGet](https://img.shields.io/nuget/v/ModFormFade?style=flat-square)
 ![Downloads](https://img.shields.io/nuget/dt/ModFormFade?style=flat-square)
 
+## ✨ Funzionalità Libreria ModFormFade
+
 🎬 **Demo Video:** [Guarda su YouTube](https://youtu.be/-Bmwirt68pI)
+
+## ✨ Funzionalità Libreria CentraTitolo
+
+🎬 **Demo Video:** [Guarda su YouTube](https://youtu.be/VXmUhjv854g)
 
 
 # ModUtility - Fade & Form Manager per WinForms VB.NET
